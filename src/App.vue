@@ -42,7 +42,7 @@ import TaskCard from "./components/TaskCard.vue";
 export default {
   name: "App",
   created () {
-      document.title = 'Kanban Page'
+      document.title = 'Trello Board'
   },
   components: {
     TaskCard,
@@ -112,22 +112,22 @@ export default {
     addTask(column) {
       const newTask = {
         id: Date.now(), 
-        title: "New Task",
+        title: "Nova Tarefa",
         date: "",
         type: "",
         url: "https://randomuser.me/api/portraits/men/75.jpg"
       };
       this.$swal.fire({
-        title: 'Create a task',
+        title: 'Criar Tarefa',
         showCancelButton: true,
-        confirmButtonText: 'Save Task',
+        confirmButtonText: 'Salva Tarefa',
         showLoaderOnConfirm: true,
         width: 600,
         html:
-            '<input id="title-input" type="text" class="swal2-input" placeholder="enter Task Title">' +
+            '<input id="title-input" type="text" class="swal2-input" placeholder="Nome da Tarefa">' +
             '<input id="date-input" type="date" class="swal2-input ">'+
             '<select id="type-input" class="swal2-input shadow"> ' +
-            ' <option value="design">choose a type</option>' +
+            ' <option value="design">Escolha o tipo da Tarefa</option>' +
             ' <option value="design">Design</option>' +
             ' <option value="QA">Q&A</option>' +
             ' <option value="Feature Request">Feature Request</option>' +
@@ -149,8 +149,8 @@ export default {
           console.log(newTask)
           column.tasks.push(newTask);
           this.$swal.fire(
-              'created!',
-              'The Task was Created.',
+              'Criado!',
+              'A tarefa foi criado.',
               'success'
           )
         }

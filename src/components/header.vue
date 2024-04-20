@@ -1,7 +1,7 @@
 <template>
   <div class="flex mx-4 mt-5 px-3 pt-3 pb-5 flex-initial justify-between">
     <div class="flex items-center">
-      <h4 class="text-4xl font-bold text-gray-600">Studio Board</h4>
+      <h4 class="text-4xl font-bold text-gray-600">Trello Board</h4>
     </div>
 
     <ul class="flex space-x-3">
