@@ -19,7 +19,7 @@
             group="task"
             @start="drag=true"
             @end="drag=false"
-            @toggle-delete = "deleteTask(column, task)"
+            @toggle-delete="deleteTask(column, task)"
         ></task-card>
         </draggable>
       </div>
@@ -111,7 +111,7 @@ export default {
   methods: {
     addTask(column) {
       const newTask = {
-        id: Date.now(), // Generate a unique ID for the new task
+        id: Date.now(), 
         title: "New Task",
         date: "",
         type: "",
@@ -155,14 +155,12 @@ export default {
           )
         }
       })
-      // const newTitle = prompt("Enter the new task title:", newTask.title);
       if (newTitle) {
         newTask.title = newTitle;
       column.tasks.push(newTask);
       }
     },
     deleteTask(column, task) {
-      // Implement the logic to delete a task
       this.$swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -190,6 +188,3 @@ export default {
 };
 </script>
 
-<style>
-
-</style>

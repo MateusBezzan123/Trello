@@ -45,8 +45,6 @@ export default {
   },
   methods : {
     editTask(task) {
-      // Implement the logic to edit a task
-      // alert(task.date)
       this.$swal.fire({
         title: 'Create a task',
         showCancelButton: true,
