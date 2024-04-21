@@ -46,16 +46,16 @@ export default {
   methods : {
     editTask(task) {
       this.$swal.fire({
-        title: 'Create a task',
+        title: 'Criar Tarefa',
         showCancelButton: true,
-        confirmButtonText: 'Save Task',
+        confirmButtonText: 'Salva Tarefa',
         showLoaderOnConfirm: true,
         width: 600,
         html:
-            '<input id="title-input" type="text" value="'+task.title+'" class="swal2-input" placeholder="enter Task Title">' +
+            '<input id="title-input" type="text" value="'+task.title+'" class="swal2-input" placeholder="Nome da Tarefa">' +
             '<input id="date-input" type="date" value="'+task.date+'" class="swal2-input ">'+
             '<select id="type-input" class="swal2-input shadow">'+
-            ' <option value="'+task.type+'">choose a type</option>'+
+            ' <option value="'+task.type+'">Escolha o tipo da Tarefa<</option>'+
             ' <option value="design">Design</option>' +
             ' <option value="QA">Q&A</option>' +
             ' <option value="Feature Request">Feature Request</option>' +
@@ -75,8 +75,8 @@ export default {
           task.date = result.value[1];
           task.type = result.value[2];
           this.$swal.fire(
-              'Updated!',
-              'The Task was updated.',
+              'Tarefa Editada!',
+              'A tarefa foi atualizada.',
               'success'
           )
         }

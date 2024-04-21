@@ -162,13 +162,13 @@ export default {
     },
     deleteTask(column, task) {
       this.$swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        title: 'Tem certeza?',
+        text: "Você não poderá reverter isso!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Foi Excluido'
       }).then((result) => {
         if (result.isConfirmed) {
           const index = column.tasks.indexOf(task);
@@ -176,8 +176,8 @@ export default {
             column.tasks.splice(index, 1);
           }
           this.$swal.fire(
-              'Deleted!',
-              'Your file has been deleted.',
+              'Deletado!',
+              'Seu arquivo foi excluído.',
               'success'
           )
         }
